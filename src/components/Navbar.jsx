@@ -1,19 +1,56 @@
-import React from 'react';
-import logo from "../assets/Logo.png";
+import { React, useState, useEffect } from 'react';
+import logo from "../assets/LogoSvg.svg";
 import { NavLink } from 'react-router-dom';
+import '../App.css'
 
 function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  useEffect(() => {
+    if (screenWidth < 640) {
+      setIsMobile(true);
+    }
+  }, [screenWidth])
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className='flex flex-shrink relative items-center justify-center w-full h-28 bg-black'>
-      <NavLink exact to='/' className='flex absolute left-10 items-center justify-center w-48 h-fit' activeClassName='active-link'><img src={logo} alt='DraftAi Logo' className='h-48 w-48' /></NavLink>
-      <div className='flex flex-shrink absolute gap-20'>
-        <NavLink exact to='/' className='text-white font-hindGuntur-regular text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Home</NavLink>
-        <NavLink to='/about' className='text-white font-hindGuntur-regular text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>About</NavLink>
-        <NavLink to='/services' className='text-white font-hindGuntur-regular text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Services</NavLink>
-        <NavLink to='/contact' className='text-white font-hindGuntur-regular text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Contact</NavLink>
+    isMobile ? (
+      <div className='flex pr-4 items-center justify-end w-[100%] h-28 bg-black' >
+        <NavLink exact to='/' className='flex absolute left-4 sm:left-10 lg:left-10 items-center justify-center sm:h-[100px] sm:w-[100px] lg:h-60 lg:w-60' activeClassName='active-link'><img src={logo} alt='DraftAi Logo' className='h-24 w-24 sm:h-48 sm:w-48 lg:h-48 lg:w-48' /></NavLink>
+        <div>
+          <button className="burger-menu" onClick={toggleMenu}>
+            <div className={isOpen ? "line line1-open" : "line"}></div>
+            <div className={isOpen ? "line line2-open" : "line"}></div>
+            <div className={isOpen ? "line line3-open" : "line"}></div>
+          </button>
+          {isOpen && (
+            <ul className="menu">
+              <li><NavLink exact to='/' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Home</NavLink></li>
+              <li><NavLink to='/about' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>About</NavLink></li>
+              <li><NavLink to='/services' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Services</NavLink></li>
+              <li><NavLink to='/contact' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Contact</NavLink></li>
+            </ul>
+          )}
+        </div>
       </div>
-      <button type='button' className='flex absolute bg-custom-grey border-custom-orange border-4 px-8 py-2 right-20 font-garet-book text-white text-xl bg-opacity-50 hover:bg-black'>WISHLIST</button>
-    </div>
+    ) : (
+      <div className='flex relative items-center justify-center w-[100%] h-28 bg-black' >
+        <NavLink exact to='/' className='flex absolute left-4 sm:left-10 lg:left-10 items-center justify-center sm:h-[100px] sm:w-[100px] lg:h-60 lg:w-60' activeClassName='active-link'><img src={logo} alt='DraftAi Logo' className='h-24 w-24 sm:h-48 sm:w-48 lg:h-48 lg:w-48' /></NavLink>
+        <div className='flex flex-shrink absolute sm:gap-8 lg:gap-20'>
+          <NavLink exact to='/' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Home</NavLink>
+          <NavLink to='/about' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>About</NavLink>
+          <NavLink to='/services' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Services</NavLink>
+          <NavLink to='/contact' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Contact</NavLink>
+        </div>
+        <button type='button' className='flex absolute bg-custom-grey border-custom-orange border-4 px-8 py-2 sm:right-4 lg:right-10 font-garet-book text-white sm:text-sm md:text-lg lg:text-xl bg-opacity-50 hover:bg-black'>WISHLIST</button>
+      </div>
+    )
   );
 }
 

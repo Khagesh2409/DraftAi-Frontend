@@ -89,3 +89,52 @@
 	border-radius: 4px;
 	box-sizing: border-box;
 }
+
+.burger-menu {
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.line {
+	width: 25px;
+	height: 3px;
+	background: white;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+.line1-open {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.line2-open {
+	opacity: 0;
+}
+
+.line3-open {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu {
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	top: 70px;
+	right: 20px;
+	background-color: black;
+	border: 1px solid white;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+.menu li {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+
+.menu li:hover {
+	background-color: white;
+}
