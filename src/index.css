@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Garet Book";
+    src: url("./assets/fonts/Garet-Book.ttf");
+}
+@font-face {
+    font-family: "Garet Heavy";
+    src: url("./assets/fonts/Garet-Heavy.ttf");
+}
+@font-face {
+    font-family: "Hind Guntur Bold";
+    src: url("./assets/fonts/HindGuntur-Bold.ttf");
+}
+@font-face {
+    font-family: "Hind Guntur Light";
+    src: url("./assets/fonts/HindGuntur-Light.ttf");
+}
+@font-face {
+    font-family: "Hind Guntur Medium";
+    src: url("./assets/fonts/HindGuntur-Medium.ttf");
+}
+@font-face {
+    font-family: "Hind Guntur Regular";
+    src: url("./assets/fonts/HindGuntur-Regular.ttf");
+}
+@font-face {
+    font-family: "Hind Guntur SemiBold";
+    src: url("./assets/fonts/HindGuntur-SemiBold.ttf");
+}

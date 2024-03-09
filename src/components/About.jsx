@@ -1,0 +1,66 @@
+import React from 'react'
+import Navbar from './Navbar'
+import "../App.css"
+import Footer from './Footer'
+
+function About() {
+  return (
+    <div>
+      <Navbar />
+      <div className='flex about h-[100vh] w-[100%] items-center justify-center text-center'>
+        <p className='text-white font-garet-book text-5xl pt-24'>Our goal is to Democratise <br /><br />the Skill of Drafting</p>
+      </div>
+      <div className='flex about2 h-[100vh] w-[100%] items-center justify-between'>
+        <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center p-12'>
+          <p className='font-hindGuntur-regular text-white rotate-180 text-3xl tracking-widest leading-10'>
+            At DraftAi, we're pioneering a new era of drafting by seamlessly merging the power of artificial intelligence with the expertise of legal professionals.<br />
+            Our mission is simple yet transformative: to revolutionize the way legal documents are created, making the process faster, more efficient, and accessible to all.
+          </p>
+        </div>
+        <p className='text-white font-garet-book text-8xl rotate-180 pl-10 pb-8'>Our Aim</p>
+      </div>
+      <div className='flex about3 h-[100vh] w-[100%] items-center justify-between'>
+        <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
+          <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12'>Founded by a team of legal experts and AI enthusiasts, DraftAi was born out of a shared vision to democratize the skill of drafting for lawyers and consumers alike. We recognized the inherent challenges and time-consuming nature of traditional drafting methods, and we set out to develop an innovative solution that would streamline and automate the process.</p>
+        </div>
+        <p className='text-white font-garet-book text-8xl pr-10'>Our Story</p>
+      </div>
+      <div className='flex about3 h-[100vh] w-[100%] items-center justify-between rotate-180'>
+        <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
+          <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180'>But DraftAi is more than just a drafting tool – it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
+          </p>
+        </div>
+        <p className='text-white font-garet-book text-8xl pr-10 rotate-180'>Our Vision</p>
+      </div>
+      <div className='flex about3 h-[100vh] w-[100%] items-center justify-center'>
+        <div className='flex flex-col items-center justify-center w-[70vw] h-[300px] rounded-xl'>
+          <p className=' font-hindGuntur-light text-5xl text-white'>To Become a <span className=' font-hindGuntur-bold text-7xl'>Next-Gen</span> Professional</p>
+          <div className='flex gap-10 items-center justify-center'>
+            <input type='text' placeholder='Enter your work email here' className='border-2 border-black text-xl rounded-md px-4 py-2 mt-4 w-[600px]' />
+            <button type='button' className=' text-black rounded-md text-md h-10 px-10 mt-4 bg-white hover:bg-custom-orange hover:text-black'>JOIN WISHLIST</button>
+          </div>
+        </div>
+      </div>
+      <div className='flex about4 h-[100vh] w-[100%] items-center justify-between'>
+        <p className='text-white font-garet-book text-7xl pr-10 rotate-180'>Our Technology</p>
+        <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
+          <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180'>With our AI-powered platform, legal professionals can now draft documents in a matter of minutes, simply by providing case notes and templates to our intelligent system. Our proprietary technology leverages advanced machine learning algorithms to analyze the input data, identify key information, and generate accurate and customized drafts tailored to the user's specific needs.</p>
+        </div>
+      </div>
+      <div className='flex about3 h-[100vh] w-[100%] items-center justify-center'>
+        <div className='flex items-center justify-center'>
+          <div className='flex flex-col gap-10 rounded-lg h-[250px] w-[60vw] items-center justify-center pt-14'>
+            <p className='font-hindGuntur-light tracking-wider text-white text-2xl text-center'><span className='font-hindGuntur-semiBold text-white text-3xl'>AI</span> has disrupted<span className='font-hindGuntur-semiBold text-white text-3xl'> 30,00,00,000+</span> Jobs <span className=' text-sm'>(As of 2023)</span><br />
+              Don't Let it affect yours, Use AI as a professional today!</p>
+            <div>
+              <button type='button' className=' text-black rounded-md text-lg h-10 bg-white px-10 hover:bg-custom-orange hover:text-white hoverEffectOnWishlist'>JOIN WISHLIST</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  )
+}
+
+export default About
