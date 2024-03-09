@@ -19,7 +19,7 @@ function Modal({ isOpen, onClose, email }) {
       nameOfTool: event.target.nameOfTool.value
     };
     try {
-      const response = await fetch('https://draftai-backend.onrender.com/', {
+      const response = await fetch('https://draftai-backend.onrender.com/save_wishlist', {
         method: 'POST',
         headers: {
           'Access-Control-Allow-Origin': '*',
