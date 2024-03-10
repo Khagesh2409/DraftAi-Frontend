@@ -17,7 +17,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className="max-w-3xl mx-auto mt-[10vh]">
+        <div className="max-w-3xl mx-auto mt-[20vh] mb-[20vh]">
             <h2 className="text-5xl font-bold mb-8 font-garet-book">FAQs</h2>
             <div className="space-y-6">
                 {faqs.map((faq, index) => (
@@ -36,7 +36,7 @@ const FAQ = () => {
                             </button>
                         </div>
                         {expandedIndex === index && (
-                            <p className="text-gray-700 mt-4 text-xl font-hindGuntur-regular tracking-wide">{faq.answer}</p>
+                            <p className="text-gray-700 mt-4 text-xl font-garet-book tracking-wide">{faq.answer}</p>
                         )}
                     </div>
                 ))}

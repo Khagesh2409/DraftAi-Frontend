@@ -11,12 +11,14 @@
 
 .about {
 	background-image: url("./assets/MatrixBg.svg");
+	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .about2 {
 	background-image: url("./assets/MatrixBg.svg");
+	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
 	transform: rotate(180deg);
@@ -24,12 +26,14 @@
 
 .about3 {
 	background-image: url("./assets/MatrixBg.svg");
+	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .about4 {
 	background-image: url("./assets/MatrixBg.svg");
+	z-index: -1;
 	background-size: cover;
 	background-repeat: no-repeat;
 	transform: rotate(180deg);
@@ -58,6 +62,22 @@
 	border: 1px solid #888;
 	width: 70vw;
 	height: 90vh;
+}
+
+.modal-content::-webkit-scrollbar {
+	width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+	background: black;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+	background: white;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 .close {

@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import '../App.css';
 import logo from "../assets/LogoSvg.svg";
 
-function Modal({ isOpen, onClose, email }) {
+function Modal({ isOpen, onClose, email = '' }) {
   const [selectedOptionForPracticeArea, setSelectedOptionForPracticeArea] = useState('');
   const [selectedOptionForAnotherTool, setSelectedOptionForAnotherTool] = useState('');
 
@@ -10,14 +10,15 @@ function Modal({ isOpen, onClose, email }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = {
-      email: event.target.email.value,
-      name: event.target.name.value,
-      phoneNumber: event.target.phoneNumber.value,
-      organisationName: event.target.organisationName.value,
-      practiceArea: selectedOptionForPracticeArea || event.target.otherPracticeArea.value,
-      anotherTool: selectedOptionForAnotherTool,
-      nameOfTool: event.target.nameOfTool.value
-    };
+      email: event.target.email?.value.trim() || 'N/A',
+      name: event.target.name?.value.trim() || 'N/A',
+      phoneNumber: event.target.phoneNumber?.value.trim() || 'N/A',
+      organisationName: event.target.organisationName?.value.trim() || 'N/A',
+      practiceArea: selectedOptionForPracticeArea || event.target.otherPracticeArea?.value.trim() || 'N/A',
+      anotherTool: selectedOptionForAnotherTool || 'N/A',
+      nameOfTool: event.target.nameOfTool?.value.trim() || 'N/A'
+    };    
+
     try {
       const response = await fetch('https://draftai-backend.onrender.com/save_wishlist', {
         method: 'POST',
@@ -68,7 +69,7 @@ function Modal({ isOpen, onClose, email }) {
           <div className='flex flex-col gap-10 font-garet-book'>
             <div>
               <p className='text-lg font-garet-book text-white'>Enter your email here:</p>
-              <input type="text" placeholder="Enter your work email here" name="email" className="border-2 border-white bg-black text-white text-lg rounded-md px-4 py-2 w-[30vw]" />
+              <input type="text" defaultValue={email} placeholder="Enter your work email here" name="email" className="border-2 border-white bg-black text-white text-lg rounded-md px-4 py-2 w-[30vw]" />
             </div>
             <div className='flex flex-col'>
               <p className='text-lg font-garet-book text-white'>Enter your name here:</p>
@@ -89,15 +90,15 @@ function Modal({ isOpen, onClose, email }) {
             <p className='text-lg font-garet-book text-white mb-2'>Select your practice area:</p>
             <div className="dropdown">
               <select value={selectedOptionForPracticeArea} onChange={handleOptionChangeForPracticeArea} className='bg-black text-white'>
-                <option value="Not Selected" className='text-white'>Select an option</option>
+                <option value="" className='text-white'>Select an option</option>
                 <option value="Corp" className='text-white'>Corp</option>
                 <option value="Litigation" className='text-white'>Litigation</option>
                 <option value="In-House" className='text-white'>In-House</option>
-                <option value="" className='text-white'>Other</option>
+                <option value="Other" className='text-white'>Other</option>
               </select>
             </div>
             {
-              (selectedOptionForPracticeArea == "") && (
+              (selectedOptionForPracticeArea == "Other") && (
                 <div className='mt-8'>
                   <p className='text-lg font-garet-book text-white'>Specify your Practice Area</p>
                   <input type="text" placeholder="Specify your Practice Area Here" name="otherPracticeArea" className="border-2 border-white bg-black text-white text-lg rounded-md px-4 py-2 w-[30vw]" />

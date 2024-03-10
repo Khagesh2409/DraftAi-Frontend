@@ -11,8 +11,8 @@ import FAQ from './FAQ'
 
 function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [email, setEmail] = useState('');
     const [isMobile, setIsMobile] = useState(false);
+    const [email, setEmail] = useState("");
 
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
@@ -26,9 +26,40 @@ function Home() {
         setEmail(event.target.value)
     }
 
-    const openModal = () => {
+    const openModal = async (event) => {
         setIsModalOpen(true);
-        console.log(email)
+        setIsModalOpen(true);
+        if (email !== "") {
+            const formData = {
+                email: email,
+                name: 'N/A',
+                phoneNumber: 'N/A',
+                organisationName: 'N/A',
+                practiceArea: 'N/A',
+                anotherTool: 'N/A',
+                nameOfTool: 'N/A'
+            };
+
+            try {
+                const response = await fetch('https://draftai-backend.onrender.com/save_wishlist', {
+                    method: 'POST',
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                if (response.ok) {
+                    alert('Data saved successfully!');
+                } else {
+                    alert('Error saving data!');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error saving data!');
+            }
+        }
     };
 
     const closeModal = () => {
@@ -610,16 +641,16 @@ function Home() {
                         <div class="w-[4px] h-[4px] bg-custom-green rounded-full"></div>
                         <div class="w-[1px] h-[1px] bg-custom-green rounded-full"></div>
                     </div>
-            </div>               
-                {/* <GreenCirclesDesign /> */ }
+                </div>
+                {/* <GreenCirclesDesign /> */}
                 <div className='w-full h-[200px] bg-custom-green flex gap-2 items-center justify-center'>
                     <p className='font-garet-book text-white sm:text-xl lg:text-4xl'>To know more, scroll through our</p>
                     <img src={logo} alt='logo' className='sm:w-[100px] sm:h-[100px] lg:w-[200px] lg:h-[200px]' />
-                    <p className='font-garet-book text-white sm:text-xl lg:text-4xl'><a href='#' className='underline underline-offset-8'>Manifesto</a></p>
+                    <p className='font-garet-book text-white sm:text-xl lg:text-4xl'><a href='https://drive.google.com/file/d/1oerSw3KIsYhYMaSCvftrqRa3W6U3r5cv/view?usp=sharing' className='underline underline-offset-8'>Manifesto</a></p>
                 </div>
                 <br /><br />
                 <Footer />
-            </div >
+            </div>
         )
     )
 }

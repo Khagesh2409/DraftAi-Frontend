@@ -4,6 +4,7 @@ import twitterLogo from '../assets/TwitterLogo.png'
 import linkedinLogo from '../assets/LinkedinLogo.png'
 import facebookLogo from '../assets/FacebookLogo.png'
 import instagramLogo from '../assets/InstagramLogo.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     const [isMobile, setIsMobile] = useState(false);
@@ -48,7 +49,7 @@ function Footer() {
         ) : (
             <div className='bg-black w-full sm:h-fit lg:h-[300px] lg:flex gap-20 justify-center'>
                 <div className='flex lg:flex-col items-center justify-center ml-6 sm:w-[100%] lg:w-[400px]'>
-                    <img src={logo} alt='DraftAi Logo' className='sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px]' />
+                    <img src={logo} alt='DraftAi Logo' className='sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] mr-[10vw]' />
                     <p className='text-white text-lg ml-4 font-hindGuntur-light mb-4'>We are proudly an Indian organization and would love to have the support of our country.</p>
                 </div>
                 <div className='bg-white w-0.5 mt-6 mb-6 items-end'></div>
@@ -56,15 +57,15 @@ function Footer() {
                     <p className='text-white font-hindGuntur-medium text-xl'>Get in touch</p>
                     <p className='text-white font-hindGuntur-light text-xl'><a href='#'>teamdraftai@gmail.com</a></p>
                     <p className='text-white font-hindGuntur-light text-xl'>+91 981 108 8200</p>
-                    <p className='text-white font-hindGuntur-light text-xl'><a href='#'>Contact Us</a></p>
+                    <p className='text-white font-hindGuntur-light text-xl'><Link to="/contact">Contact Us</Link></p>
                 </div>
-                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8 sm:mt-8'>
+                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8 sm:mt-8 mb-10'>
                     <p className='text-white font-hindGuntur-medium text-xl'>Who we are</p>
-                    <p className='text-white font-hindGuntur-light text-xl cursor-pointer'>About</p>
+                    <p className='text-white font-hindGuntur-light text-xl cursor-pointer'><Link to="/about">About</Link></p>
                     <p className='text-white font-hindGuntur-light text-xl cursor-pointer'>Terms of Service</p>
                     <p className='text-white font-hindGuntur-light text-xl cursor-pointer'>Privacy Policy</p>
                 </div>
-                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8 sm:mt-8'>
+                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8 sm:mt-8 mb-20'>
                     <p className='text-white font-hindGuntur-medium text-xl'>Follow us</p>
                     <div className='flex gap-4 sm:mb-8'>
                         <a href='https://twitter.com/draftai_in'><img src={twitterLogo} alt='Twitter Logo' className='h-8 w-8' /></a>

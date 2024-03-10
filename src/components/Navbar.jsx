@@ -2,16 +2,26 @@ import { React, useState, useEffect } from 'react';
 import logo from "../assets/LogoSvg.svg";
 import { NavLink } from 'react-router-dom';
 import '../App.css'
+import Modal from './Modal';
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
+  
   useEffect(() => {
     if (screenWidth < 640) {
       setIsMobile(true);
     }
   }, [screenWidth])
+  
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,7 +58,8 @@ function Navbar() {
           <NavLink to='/services' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Services</NavLink>
           <NavLink to='/contact' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Contact</NavLink>
         </div>
-        <button type='button' className='flex absolute bg-custom-grey border-custom-orange border-4 px-8 py-2 sm:right-4 lg:right-10 font-garet-book text-white sm:text-sm md:text-lg lg:text-xl bg-opacity-50 hover:bg-black'>WISHLIST</button>
+        <button type='button' className='flex absolute bg-custom-grey border-custom-orange border-4 px-8 py-2 sm:right-4 lg:right-10 font-garet-book text-white sm:text-sm md:text-lg lg:text-xl bg-opacity-50 hover:bg-black' onClick={openModal}>WISHLIST</button>
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
       </div>
     )
   );
