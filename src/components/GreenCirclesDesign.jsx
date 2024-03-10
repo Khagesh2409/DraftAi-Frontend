@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GreenCircles() {
+const GreenCirclesDesign = () => {
     const circleSizes = [24, 20, 16, 12, 8, 4, 1];
     const numIterations = 100;
 
@@ -17,4 +17,4 @@ function GreenCircles() {
     );
 }
 
-export default GreenCircles;
+export default GreenCirclesDesign;
