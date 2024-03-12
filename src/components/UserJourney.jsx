@@ -9,7 +9,7 @@ function UserJourney() {
     const [isMobile, setIsMobile] = useState(false);
 
     const mlModelLocalSite = () => {
-        window.open('http://localhost:8051', '_blank');
+        window.open('http://localhost:8501/', '_blank');
     }
 
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;

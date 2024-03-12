@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import Navbar from './Navbar'
+import Navbar2 from './Navbar2'
 import "../App.css"
 import Footer from './Footer'
 import Modal from './Modal';
@@ -119,20 +119,23 @@ function About() {
       </div>
     ) : (
       <div>
-        <div className='about'>
-          <Navbar />
-          <div className='flex h-[100vh] w-[100%] items-center justify-center text-center'>
-            <p className='text-white font-garet-book text-5xl pt-24'>Our goal is to Democratise <br /><br />the Skill of Drafting</p>
+        <Navbar2 />
+        <div className='about2'>
+          <div className='rotate-180'>
+            <div className='flex h-[100vh] w-[100%] items-center justify-center text-center'>
+              <p className='text-white font-garet-book text-5xl pb-16'>Our goal is to Democratise <br /><br />the Skill of Drafting</p>
+            </div>
           </div>
         </div>
-        <div className='flex about2 h-[100vh] w-[100%] items-center justify-between'>
+
+        <div className='flex about h-[100vh] w-[100%] items-center justify-between'>
+          <p className='text-white font-garet-book text-8xl pl-10 pb-8 pt-16'>Our Aim</p>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center p-12'>
-            <p className='font-hindGuntur-regular text-white rotate-180 text-3xl tracking-widest leading-10'>
+            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 text-center'>
               At DraftAi, we're pioneering a new era of drafting by seamlessly merging the power of artificial intelligence with the expertise of legal professionals.<br />
-              Our mission is simple yet transformative: to revolutionize the way legal documents are created, making the process faster, more efficient, and accessible to all.
+              Our mission is simple yet transformative: to revolutionise the way legal documents are created, making the process faster, more efficient, and accessible to all.
             </p>
           </div>
-          <p className='text-white font-garet-book text-8xl rotate-180 pl-10 pb-8'>Our Aim</p>
         </div>
         {/* <div className='flex about3 h-[100vh] w-[100%] items-center justify-between'>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
@@ -141,17 +144,17 @@ function About() {
           <p className='text-white font-garet-book text-8xl pr-10'>Our Story</p>
         </div> */}
         <div className='flex about3 h-[100vh] w-[100%] items-center justify-between rotate-180'>
-          <p className='text-white font-garet-book text-8xl pr-10 rotate-180'>Our Vision</p>
+          <p className='text-white font-garet-book text-8xl pr-10 pb-16 rotate-180'>Our Vision</p>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
-            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180'>But DraftAi is more than just a drafting tool - it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
+            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180 text-center'>DraftAi is more than just a drafting tool - it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
             </p>
           </div>
         </div>
         <div className='flex about3 h-[100vh] w-[100%] items-center justify-center'>
-          <div className='flex flex-col items-center justify-center w-[70vw] h-[300px] rounded-xl'>
+          <div className='flex flex-col items-center justify-center w-[70vw] h-[300px] rounded-xl pt-10'>
             <p className=' font-hindGuntur-light text-5xl text-white'>To Become a <span className=' font-hindGuntur-bold text-7xl'>Next-Gen</span> Professional</p>
             <div className='flex gap-10 items-center justify-center'>
-              <input type='text' onChange={handleEmailChange} placeholder='Enter your work email here' className='border-2 border-black text-xl rounded-md px-4 py-2 mt-4 w-[600px]' />
+              <input type='text' onChange={handleEmailChange} placeholder='Enter your work email here' className='border-2 border-white bg-black text-xl text-white rounded-md px-4 py-2 mt-4 w-[600px]' />
               <button type='button' className='text-black rounded-md text-md h-10 px-10 mt-4 bg-white hover:bg-custom-orange hover:text-black' onClick={openModal}>JOIN WISHLIST</button>
               <Modal isOpen={isModalOpen} onClose={closeModal} email={email} />
             </div>
