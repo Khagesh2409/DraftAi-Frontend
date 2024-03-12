@@ -29,7 +29,7 @@ function Home() {
     }
 
     const mlModelLocalSite = () => {    
-        window.open('http://localhost:8051', '_blank');
+        window.open('http://localhost:8501/', '_blank');
     }
 
     const openModal = async (event) => {
