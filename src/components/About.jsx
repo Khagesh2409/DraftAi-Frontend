@@ -129,10 +129,10 @@ function About() {
         </div>
 
         <div className='flex about h-[100vh] w-[100%] items-center justify-between'>
-          <p className='text-white font-garet-book text-8xl pl-10 pb-8 pt-16'>Our Aim</p>
+          <p className='text-white font-garet-book text-7xl pl-10 pb-8 pt-16'>Our Aim</p>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center p-12'>
-            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 text-center'>
-              At DraftAi, we're pioneering a new era of drafting by seamlessly merging the power of artificial intelligence with the expertise of legal professionals.<br />
+            <p className='font-hindGuntur-regular text-white text-2xl tracking-widest leading-10 text-center'>
+              At DraftAi, we're pioneering a new era of drafting by seamlessly merging the power of artificial intelligence with the expertise of legal professionals.<br /><br/>
               Our mission is simple yet transformative: to revolutionise the way legal documents are created, making the process faster, more efficient, and accessible to all.
             </p>
           </div>
@@ -144,9 +144,9 @@ function About() {
           <p className='text-white font-garet-book text-8xl pr-10'>Our Story</p>
         </div> */}
         <div className='flex about3 h-[100vh] w-[100%] items-center justify-between rotate-180'>
-          <p className='text-white font-garet-book text-8xl pr-10 pb-16 rotate-180'>Our Vision</p>
+          <p className='text-white font-garet-book text-7xl pr-10 pb-16 rotate-180'>Our Vision</p>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
-            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180 text-center'>DraftAi is more than just a drafting tool - it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
+            <p className='font-hindGuntur-regular text-white text-2xl tracking-widest leading-10 p-12 rotate-180 text-center'>DraftAi is more than just a drafting tool - it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
             </p>
           </div>
         </div>

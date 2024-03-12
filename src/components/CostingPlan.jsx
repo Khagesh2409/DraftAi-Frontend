@@ -51,6 +51,13 @@ function CostingPlan() {
                             </div>
                         </div>
                         <p className="text-xl flex font-semibold text-white gap-3">
+                            <span className='text-5xl line-through'>₹24,000</span>
+                            <p className='flex flex-col text-sm justify-center'>
+                                <span>per user</span>
+                                <span>per year</span>
+                            </p>
+                        </p><br/>
+                        <p className="text-xl flex font-semibold text-white gap-3">
                             <span className='text-5xl'>₹18,000</span>
                             <p className='flex flex-col text-sm justify-center'>
                                 <span>per user</span>
@@ -71,7 +78,7 @@ function CostingPlan() {
                         {/* <p class="text-white mb-2 text-sm pb-4">Everything in Basic plus..</p> */}
                         <ul class="text-gray-600 list-disc list-inside">
                             <li className='text-white text-sm pb-2'>Access to plus features </li>
-                            <li className='text-white text-sm pb-2'>2 device per user </li>
+                            <li className='text-white text-sm pb-2'>2 devices per user </li>
                             <li className='text-white text-sm pb-2'>Unlimited Drafts/Month</li>
                             <li className='text-white text-sm pb-2'>Priority chat and email support </li>
                         </ul>

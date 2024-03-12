@@ -27,6 +27,10 @@ function Contact() {
                 <p className='text-2xl font-hindGuntur-regular'>Ishikaa Seth (COO)</p>
                 <p className='text-xl font-hindGuntur-regular'>ishikaaseth01@gmail.com</p>
               </div>
+              <div>
+                <p className='text-2xl font-hindGuntur-regular'>Gaganish Yadav (Tech Lead)</p>
+                <p className='text-xl font-hindGuntur-regular'>gaganishh@gmail.com</p>
+              </div>
             </div>
 
           </div>
