@@ -28,7 +28,7 @@ function About() {
         practiceArea: 'N/A',
         anotherTool: 'N/A',
         nameOfTool: 'N/A'
-      };      
+      };
 
       try {
         const response = await fetch('https://draftai-backend.onrender.com/save_wishlist', {
@@ -119,9 +119,11 @@ function About() {
       </div>
     ) : (
       <div>
-        <Navbar />
-        <div className='flex about h-[100vh] w-[100%] items-center justify-center text-center'>
-          <p className='text-white font-garet-book text-5xl pt-24'>Our goal is to Democratise <br /><br />the Skill of Drafting</p>
+        <div className='about'>
+          <Navbar />
+          <div className='flex h-[100vh] w-[100%] items-center justify-center text-center'>
+            <p className='text-white font-garet-book text-5xl pt-24'>Our goal is to Democratise <br /><br />the Skill of Drafting</p>
+          </div>
         </div>
         <div className='flex about2 h-[100vh] w-[100%] items-center justify-between'>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center p-12'>
@@ -132,18 +134,18 @@ function About() {
           </div>
           <p className='text-white font-garet-book text-8xl rotate-180 pl-10 pb-8'>Our Aim</p>
         </div>
-        <div className='flex about3 h-[100vh] w-[100%] items-center justify-between'>
+        {/* <div className='flex about3 h-[100vh] w-[100%] items-center justify-between'>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
             <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12'>Founded by a team of legal experts and AI enthusiasts, DraftAi was born out of a shared vision to democratize the skill of drafting for lawyers and consumers alike. We recognized the inherent challenges and time-consuming nature of traditional drafting methods, and we set out to develop an innovative solution that would streamline and automate the process.</p>
           </div>
           <p className='text-white font-garet-book text-8xl pr-10'>Our Story</p>
-        </div>
+        </div> */}
         <div className='flex about3 h-[100vh] w-[100%] items-center justify-between rotate-180'>
+          <p className='text-white font-garet-book text-8xl pr-10 rotate-180'>Our Vision</p>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
-            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180'>But DraftAi is more than just a drafting tool – it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
+            <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180'>But DraftAi is more than just a drafting tool - it's a catalyst for change in the legal industry. By harnessing the power of AI, we're empowering legal professionals to work smarter, not harder, freeing up valuable time and resources that can be better spent on high-value tasks and client engagement.
             </p>
           </div>
-          <p className='text-white font-garet-book text-8xl pr-10 rotate-180'>Our Vision</p>
         </div>
         <div className='flex about3 h-[100vh] w-[100%] items-center justify-center'>
           <div className='flex flex-col items-center justify-center w-[70vw] h-[300px] rounded-xl'>
@@ -155,7 +157,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className='flex about4 h-[100vh] w-[100%] items-center justify-between'>
+        {/* <div className='flex about4 h-[100vh] w-[100%] items-center justify-between'>
           <p className='text-white font-garet-book text-7xl pr-10 rotate-180'>Our Technology</p>
           <div className='bg-black w-[50%] h-[80vh] right1 flex items-center justify-center'>
             <p className='font-hindGuntur-regular text-white text-3xl tracking-widest leading-10 p-12 rotate-180'>With our AI-powered platform, legal professionals can now draft documents in a matter of minutes, simply by providing case notes and templates to our intelligent system. Our proprietary technology leverages advanced machine learning algorithms to analyze the input data, identify key information, and generate accurate and customized drafts tailored to the user's specific needs.</p>
@@ -171,7 +173,7 @@ function About() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <Footer />
       </div>
     )

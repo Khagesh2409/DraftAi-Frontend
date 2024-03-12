@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import '../App.css'
 import Modal from './Modal';
 
-function Navbar() {
+function Navbar2() {
   const [isMobile, setIsMobile] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -50,7 +50,7 @@ function Navbar() {
         </div>
       </div>
     ) : (
-      <div className='flex relative items-center justify-center w-[100%] h-28 bg-black bg-opacity-70' >
+      <div className='flex relative items-center justify-center w-[100%] h-28 bg-black' >
         <NavLink exact to='/' className='flex absolute left-4 sm:left-10 lg:left-10 items-center justify-center sm:h-[100px] sm:w-[100px] lg:h-60 lg:w-60' activeClassName='active-link'><img src={logo} alt='DraftAi Logo' className='h-24 w-24 sm:h-48 sm:w-48 lg:h-36 lg:w-36' /></NavLink>
         <div className='flex flex-shrink absolute sm:gap-8 lg:gap-20'>
           <NavLink exact to='/' className='text-white font-hindGuntur-regular sm:text-sm md:text-lg lg:text-xl cursor-pointer hover:text-custom-grey' activeClassName='active-link'>Home</NavLink>
@@ -66,4 +66,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar2;

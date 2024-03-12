@@ -21,7 +21,7 @@ function Footer() {
         isMobile ? (
             <div className='bg-black w-full sm:h-fit lg:h-[300px] lg:flex gap-20 justify-center'>
                 <div className='flex flex-col text-center lg:flex-col items-center justify-center sm:w-[100%] lg:w-[400px]'>
-                    <img src={logo} alt='DraftAi Logo' className='h-[100px] w-[100px]' />
+                    <Link to="/"><img src={logo} alt='DraftAi Logo' className='h-[100px] w-[100px]'/></Link> 
                     <p className='text-white text-lg font-hindGuntur-light mb-4'>We are proudly an Indian organization and would love to have the support of our country.</p>
                 </div>
                 <div className='flex flex-col items-center justify-center mt-12 gap-1 sm:gap-2 sm:ml-8'>
@@ -47,30 +47,30 @@ function Footer() {
                 </div>
             </div>
         ) : (
-            <div className='bg-black w-full sm:h-fit lg:h-[300px] lg:flex gap-20 justify-center'>
-                <div className='flex lg:flex-col items-center justify-center ml-6 sm:w-[100%] lg:w-[400px]'>
-                    <img src={logo} alt='DraftAi Logo' className='sm:h-[150px] sm:w-[150px] lg:h-[200px] lg:w-[200px] mr-[10vw]' />
+            <div className='bg-black w-full sm:h-fit lg:h-[300px] lg:flex gap-20'>
+                <div className='flex lg:flex-col ml-6 sm:w-[100%] lg:w-[400px]'>
+                <Link to="/"><img src={logo} alt='DraftAi Logo' className='h-[200px] w-[200px] ml-4'/></Link> 
                     <p className='text-white text-lg ml-4 font-hindGuntur-light mb-4'>We are proudly an Indian organization and would love to have the support of our country.</p>
                 </div>
                 <div className='bg-white w-0.5 mt-6 mb-6 items-end'></div>
-                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8'>
+                <div className='flex flex-col gap-4 sm:gap-2 sm:ml-8 sm:pt-8'>
                     <p className='text-white font-hindGuntur-medium text-xl'>Get in touch</p>
+                    <p className='text-white font-hindGuntur-light text-xl'><Link to="/contact">Contact Us</Link></p>
                     <p className='text-white font-hindGuntur-light text-xl'><a href='#'>teamdraftai@gmail.com</a></p>
                     <p className='text-white font-hindGuntur-light text-xl'>+91 981 108 8200</p>
-                    <p className='text-white font-hindGuntur-light text-xl'><Link to="/contact">Contact Us</Link></p>
                 </div>
-                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8 sm:mt-8 mb-10'>
+                <div className='flex flex-col gap-4 sm:gap-2 sm:ml-8 sm:mt-8 mb-10'>
                     <p className='text-white font-hindGuntur-medium text-xl'>Who we are</p>
                     <p className='text-white font-hindGuntur-light text-xl cursor-pointer'><Link to="/about">About</Link></p>
                     <p className='text-white font-hindGuntur-light text-xl cursor-pointer'>Terms of Service</p>
                     <p className='text-white font-hindGuntur-light text-xl cursor-pointer'>Privacy Policy</p>
                 </div>
-                <div className='flex flex-col justify-center gap-4 sm:gap-2 sm:ml-8 sm:mt-8 mb-20'>
+                <div className='flex flex-col gap-4 sm:gap-2 sm:ml-8 sm:mt-8'>
                     <p className='text-white font-hindGuntur-medium text-xl'>Follow us</p>
                     <div className='flex gap-4 sm:mb-8'>
+                        <a href='https://www.linkedin.com/company/draftai'><img src={linkedinLogo} alt='Linkedin Logo' className='h-8 w-8' /></a>
                         <a href='https://twitter.com/draftai_in'><img src={twitterLogo} alt='Twitter Logo' className='h-8 w-8' /></a>
                         <a href='https://www.facebook.com/draftai.in'><img src={facebookLogo} alt='Facebook Logo' className='h-8 w-8' /></a>
-                        <a href='https://www.linkedin.com/company/draftai'><img src={linkedinLogo} alt='Linkedin Logo' className='h-8 w-8' /></a>
                         <a href='https://www.instagram.com/draftai.in/'><img src={instagramLogo} alt='Instagram Logo' className='h-8 w-8' /></a>
                     </div>
                 </div>

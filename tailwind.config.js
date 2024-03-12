@@ -12,6 +12,9 @@ export default {
         "custom-green": "#2E4C3D",
         "custom-orange": "#FFA500",
         "custom-grey": "#808080",
+        "custom-blue-light": "#324A5F",
+        "custom-blue-dark": "#1B2A41",
+        "custom-offwhite": "#E6E6E6"
       },
       fontFamily:{
         'berlin': "Berlin",
