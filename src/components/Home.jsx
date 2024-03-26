@@ -121,8 +121,10 @@ function Home() {
                 <div className='weighingScaleDiv'>
                     <Navbar />
                     <div className='flex flex-col sm:gap-16 lg:gap-24 items-center justify-center w-[100%] h-[80vh] relative'>
-                        <p className='text-white absolute left-16 top-[200px] sm:text-4xl font-garet-book w-[60vw] tracking-wide lg:text-5xl' id='headline'>AI-Powered Drafting</p>
-                        <p className='text-white absolute left-16 sm:text-4xl font-garet-book w-[60vw] tracking-wide lg:text-5xl' id='headline'>Starts Here</p>
+                        <div className="lg:flex lg:flex-col lg:gap-10 absolute top-[30%] lg:left-16">
+                            <p className='text-white sm:text-4xl font-garet-book w-[60vw] tracking-wide lg:text-5xl' id='headline'>AI-Powered Drafting</p>
+                            <p className='text-white sm:text-4xl font-garet-book w-[60vw] tracking-wide lg:text-5xl' id='headline'>Starts Here</p>
+                        </div>
                         {/* <button type='button' className='absolute top-16 left-16 font-garet-book text-custom-orange border-custom-orange border-4 px-8 sm:py-2 lg:py-6 tracking-widest rounded-md sm:text-lg lg:text-2xl bg-black bg-opacity-[70%] hover:bg-black' onClick={openModal}>JOIN THE WISHLIST</button> */}
                         <div className='flex gap-4 absolute left-16 top-[350px]'>
                             <button type='button' className='font-garet-book border-2 px-2 w-[150px] sm:py-2 lg:py-3 text-white sm:text-lg lg:text-lg bg-custom-grey hover:bg-white hover:text-black' onClick={openModal}>Wishlist</button>

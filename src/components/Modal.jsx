@@ -21,6 +21,7 @@ function Modal({ isOpen, onClose, email = '' }) {
 
     try {
       const response = await fetch('https://draftai-backend.onrender.com/save_wishlist', {
+      // const response = await fetch('http://localhost:8000/save_wishlist', {
         method: 'POST',
         headers: {
           'Access-Control-Allow-Origin': '*',
